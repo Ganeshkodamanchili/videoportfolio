@@ -1,0 +1,213 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap');
+
+/* RESET */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* 🌍 BASE */
+body {
+  background-image:
+      linear-gradient(135deg, rgba(15,15,15,0.85), rgba(26,26,26,0.85), rgba(0,0,0,0.85)),
+      url('power.png');  /* 🔥 Your background image restored */
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  font-family: 'Poppins', sans-serif;
+  color: #fff;
+  line-height: 1.6;
+  scroll-behavior: smooth;
+}
+
+/* 🌐 NAVBAR */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 40px;
+  background: rgba(0, 0, 0, 0.7);
+  position: sticky;
+  top: 0;
+  backdrop-filter: blur(10px);
+  z-index: 1000;
+}
+
+.logo {
+  color: #00ffc3;
+  font-weight: 700;
+  font-size: 1.5rem;
+}
+
+.navbar ul {
+  list-style: none;
+  display: flex;
+  gap: 25px;
+}
+
+.navbar a {
+  text-decoration: none;
+  color: #fff;
+  transition: color 0.3s ease;
+}
+
+.navbar a:hover {
+  color: #00ffc3;
+}
+
+/* 🏠 HOME SECTION */
+.home-section {
+  text-align: center;
+  padding: 100px 20px;
+}
+
+.home-section h1 {
+  font-size: 2.8rem;
+  color: #00ffc3;
+}
+
+.home-section p {
+  color: #aaa;
+  margin-top: 10px;
+  font-size: 1.2rem;
+}
+
+/* 🧠 ABOUT */
+.about-section {
+  text-align: center;
+  padding: 85px 20px;
+  background: rgba(255,255,255,0.05);
+}
+
+.about-section h2 {
+  color: #00ffc3;
+  margin-bottom: 15px;
+}
+
+.about-section p {
+  max-width: 800px;
+  margin: auto;
+  color: #ccc;
+}
+
+/* 🎬 VIDEO GALLERY */
+.video-gallery {
+  text-align: center;
+  padding: 80px 20px;
+}
+
+.video-gallery h2 {
+  color: #00ffc3;
+  margin-bottom: 40px;
+}
+
+.video-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 30px;
+}
+
+.video-card {
+  background: rgba(0, 0, 0, 0.6);
+  border-radius: 15px;
+  padding: 15px;
+  box-shadow: 0 4px 20px rgba(0,255,200,0.2);
+  transition: all 0.3s ease;
+}
+
+.video-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 6px 25px rgba(0,255,200,0.4);
+}
+
+/* 🖼️ THUMBNAIL */
+.thumbnail {
+  width: 100%;
+  height: 400px;
+  object-fit: cover;
+  border-radius: 10px;
+  transition: box-shadow 0.3s, transform 0.2s;
+}
+
+.thumbnail:hover {
+  box-shadow: 0 0 25px rgba(0, 255, 200, 0.6);
+  transform: scale(1.03);
+}
+
+.thumbnail:active {
+  box-shadow: 0 0 35px rgba(0, 255, 200, 1);
+  transform: scale(0.98);
+}
+
+/* 🔖 VIDEO TITLES */
+.video-card h3 {
+  color: #00ffc3;
+  text-align: center;
+  font-weight: 500;
+  margin-top: 10px;
+}
+
+/* 🖼️ LOGO LINK */
+.brand-link {
+  text-align: center;
+  margin: 50px 0 20px;
+}
+
+.brand-logo {
+  width: 120px;
+  border-radius: 30px;
+  background: #b8860b;
+  padding: 8px 16px;
+  box-shadow: 0 0 20px rgba(255,200,0,0.3);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.brand-logo:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 30px rgba(255,200,0,0.6);
+}
+
+/* 📞 CONTACT */
+.contact {
+  text-align: center;
+  margin: 60px 0;
+}
+
+.contact h2 {
+  color: #00ffc3;
+  margin-bottom: 10px;
+}
+
+.contact a {
+  color: #ffd700;
+  text-decoration: none;
+}
+
+.contact a:hover {
+  text-decoration: underline;
+}
+
+/* ⚙️ FOOTER */
+footer {
+  text-align: center;
+  padding: 20px;
+  color: #aaa;
+  border-top: 1px solid #333;
+  background: rgba(0,0,0,0.7);
+}
+
+/* 📱 RESPONSIVE TWEAKS */
+@media (max-width: 768px) {
+  .navbar ul {
+    flex-direction: column;
+    gap: 15px;
+  }
+  .home-section h1 {
+    font-size: 2rem;
+  }
+  .video-container {
+    grid-template-columns: 1fr;
+  }
+}
